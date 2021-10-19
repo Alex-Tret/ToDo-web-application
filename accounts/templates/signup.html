@@ -8,9 +8,12 @@
      {% load static %}
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+        .text-muted { color:black; }
+    </style>
 </head>
-<body style="background-color:#b1f6cb">
-<div class="container min-vh-100">
+<body class="text-center">
+<div class="modal-content rounded-5 shadow">
     <div class="row min-vh-100 justify-content-center align-items-center" >
         <div >
             <h1 class="align-items-center">TodoApp</h1>
@@ -18,7 +21,7 @@
             <form method="post">
               {% csrf_token %}
               {{ form|crispy }}
-              <button type="submit" class="btn btn-primary">Sign up</button>
+              <button type="submit" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Sign up</button>
             </form>
         </div>
     </div>

@@ -6,5 +6,5 @@ from .views import index
 urlpatterns = [
 
     path('', index, name='projectlist'),
-
+    # path('todolist/', index, name='projectlist'),
 ]

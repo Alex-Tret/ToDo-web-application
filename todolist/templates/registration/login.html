@@ -11,16 +11,24 @@
 <!--     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">-->
 
 </head>
-<body style="background-color:#b1f6cb">
-<div class="container min-vh-100">
+<body class="modal modal-tour position-static d-block bg-secondary py-5">
+<div class="modal-body p-5">
     <div class="row min-vh-100 justify-content-center align-items-center" >
         <div >
             <h1 class="align-items-center">TodoApp</h1>
             <h2 class="align-items-center">Log In</h2>
+            <p>If you are not registered, pls <a href="{% url 'signup' %}">Sign Up</a> </p>
             <form method="post">
               {% csrf_token %}
               {{ form|crispy }}
-              <button type="submit"  class="btn btn-primary">Log In</button>
+                <div class="align-items-center">
+                    <button type="submit"  class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Log In</button>
+<!--                    <hr class="my-4">-->
+
+                    <a href="{% url 'signup' %}" class="w-100 mb-2 btn btn-lg rounded-4 btn-success" role="button">Sign Up</a>
+                </div>
+
+
             </form>
         </div>
     </div>

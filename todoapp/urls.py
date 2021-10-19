@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from django.views.generic import RedirectView
-# from todoapp.todolist.views import index
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='todolist')),
+    path('', RedirectView.as_view(url='accounts/login')),
     path('todolist/', include('todolist.urls')),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls'), name='login'), # added login enter
 ]
+urlpatterns += staticfiles_urlpatterns()
